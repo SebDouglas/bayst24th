@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Reflection</title>
+    <style>
+        body {
+            background: url('86.3.jpg') no-repeat center center fixed;
+            background-size: 100% 100%;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+        .navbar-table, .navbar {
+            opacity: 0.9;
+            background: rgba(30, 30, 30, 0.9);
+            border: 1px solid #6c6c6c;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+            padding: 5px;
+            margin-bottom: 2px;
+            width: 150px;
+            position: absolute;
+            left: -200px;
+            transition: transform 0.5s ease-in-out;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 1px;
+            text-align: center;
+        }
+        .nav-button {
+            display: block;
+            padding: 8px;
+            background-color: #4a4a4a;
+            color: #e0e0e0;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            border: 1px solid #6c6c6c;
+            font-size: 0.9em;
+        }
+        .nav-button:hover {
+            background-color: #6a6a6a;
+            transform: scale(1.05);
+        }
+        .logo-img {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            width: 10%;
+            max-width: 100px;
+            transition: transform 0.3s, filter 0.3s;
+            animation: hover-glow 1.5s infinite alternate ease-in-out;
+        }
+        .logo-img:hover {
+            transform: scale(0.8);
+            filter: drop-shadow(0 0 15px #f3b623);
+            animation: none;
+        }
+        @keyframes hover-glow {
+            0% { filter: drop-shadow(0 0 5px #f3b623); }
+            100% { filter: drop-shadow(0 0 15px #f3b623); }
+        }
+        .navbar-table {
+            top: 20px;
+        }
+        .navbar {
+            top: 170px;
+        }
+        .chibi-img {
+            width: 170px;
+            height: auto;
+            position: absolute;
+            transition: transform 0.5s ease-in-out;
+            filter: brightness(1.2) contrast(1.1);
+        }
+        #chibi1 {
+            top: -30px;
+            left: -10px;
+        }
+        #chibi2 {
+            top: 170px;
+            left: -10px;
+        }
+        #lena {
+            width: 300px;
+            right: 10px;
+            bottom: 10px;
+            position: fixed;
+        }
+        .show-nav {
+            transform: translateX(210px);
+        }
+        .show-chibi {
+            transform: translateX(350px);
+        }
+        
+        /* Adjusted reflection container to make it smaller */
+        .reflection-container {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-radius: 15px;
+            padding: 20px;
+            width: 50%; /* Decreased width to make it smaller */
+            height: 300px; /* Set a smaller fixed height */
+            margin: 50px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+            position: relative;
+            z-index: 2;
+        }
+        .reflection-title {
+            font-size: 2em;
+            font-weight: bold;
+            background: linear-gradient(to right, red, blue);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+        .reflection-text {
+            font-size: 1.2em;
+            color: white;
+            font-weight: bold;
+            line-height: 1.6;
+            overflow-y: auto; /* Allow scrolling if the text overflows */
+            height: 220px; /* Restrict the height of the text area */
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const logo = document.querySelector('.logo-img');
+            const navbarTable = document.querySelector('.navbar-table');
+            const navbar = document.querySelector('.navbar');
+            const chibis = [document.querySelector('#chibi1'), document.querySelector('#chibi2')];
+
+            logo.addEventListener('click', () => {
+                navbarTable.classList.toggle('show-nav');
+                navbar.classList.toggle('show-nav');
+                chibis.forEach(chibi => chibi.classList.toggle('show-chibi'));
+            });
+        });
+
+        window.addEventListener('beforeunload', (event) => {
+            event.preventDefault();
+            event.returnValue = 'Are you sure you want to leave this page?';
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <img class="logo-img" src="logo3.jpg" alt="E-PORTFOLIO">
+    </div>
+
+    <div class="navbar-table">
+        <table>
+            <tr><td><a class="nav-button" href="ICT E-PORTFOLIO.html">1st Quarter</a></td></tr>
+            <tr><td><a class="nav-button" href="2ND QUARTER.html">2nd Quarter</a></td></tr>
+            <tr><td><a class="nav-button" href="4TH QUARTER.html">4th Quarter</a></td></tr>
+        </table>
+    </div>
+    <div class="navbar">
+        <table>
+            <tr><td><a class="nav-button" href="AboutMe4.html">About Me!</a></td></tr>
+            <tr><td><a class="nav-button" href="Activities4.html">Activities</a></td></tr>
+            <tr><td><a class="nav-button" href="Lessons4.html">Lessons</a></td></tr>
+            <tr><td><a class="nav-button" href="Reflection4.html">Reflection</a></td></tr>
+            <tr><td><a class="nav-button" href="Feedback4.html">Feedback</a></td></tr>
+        </table>
+    </div>
+
+    <!-- New Reflection Section -->
+    <div class="reflection-container">
+        <div class="reflection-title">Reflection</div>
+        <p class="reflection-text">
+            What I learned during this quarter is mainly JavaScript, I've learned so many things about coding up until now.  
+            It's amazing on how much time it takes to code, and I like things that take a lengthy amount of time for a  
+            good product. Ms. Uminga is one of the best teachers ever, having passion in teaching ICT even with a busy schedule.  
+            Overall, I like ICT; it's just hard to memorize codes and studying in it. This is all for my 4th Quarter reflection, 
+            Thank you! And have a great day!
+        </p>
+    </div>
+
+    <img id="chibi1" class="chibi-img" src="chibi.png" alt="Chibi Image 1">
+    <img id="chibi2" class="chibi-img" src="chibi2.png" alt="Chibi Image 2">
+    <img id="lena" class="chibi-img" src="lena.png" alt="Lena">
+</body>
+</html>
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reflection</title>
+    <style>
+        body {
+            background: url('recroom.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #F1F1F1;
+            padding: 0;
+        }
+
+        .sidebar {
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 200px; 
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            background-color: #FF7F00;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            font-weight: bold;
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: 1.1em;
+            text-align: left;
+        }
+
+        .sidebar a:hover {
+            background-color: #FF5A00;
+            transform: scale(1.05);
+        }
+
+        .main {
+            margin-left: 230px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            padding: 40px 20px;
+            text-align: center; 
+        }
+
+        .content {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            width: 70%;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            text-align: justify;
+        }
+
+        .content p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin: 20px;
+            color: yellow;
+        }
+
+        img {
+            width: 50%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <a href="2ND QUARTER.html">Home</a>
+    <a href="About Me!-2.html">About Me!</a>
+    <a href="Activities-2.html">Activities</a>
+    <a href="Lessons-2.html">Lessons</a>
+    <a href="Reflection-2.html">Reflection</a>
+    <a href="Feedback-2.html">Feedback</a>
+</div>
+
+<div class="main">
+    <img src="reflection.png" alt="Reflection">
+    <div class="content">
+        <p>
+            What I learned during this quarter is mainly CSS, I've learn't so many things about coding up until now.
+            It amazes me how much time it takes to code, And I like things that take a lengthy amount of time for a
+            good product. Ms. Uminga is an amazing teacher, having passion in teaching ICT even with a busy schedule.
+            Overall I like ICT, its just hard to memorize codes and studying in it. This is all for my 2nd Quarter reflection,
+            Thank you! And have a great day!
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
